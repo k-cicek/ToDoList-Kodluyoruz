@@ -1,12 +1,76 @@
-ul li.checked{
- background: #888;
+.header {
+ background-color: #f78501;
+ padding: 30px 40px;
+ color: white;
+ text-align: center;
+}
+
+img {
+ background-color: white;
+ width: 25%;
+}
+
+.header:after {
+ content: "";
+ display: table;
+ clear: both;
+}
+
+.app-title{
+ font-size: 25px;
+}
+
+ul {
+ margin: 0;
+ padding: 0;
+}
+
+ul li {
+ cursor: pointer;
+ position: relative;
+ padding: 12px 8px 12px 40px;
+ background: #eee;
+ font-size: 18px;
+ transition: 0.2s;
+ list-style-type: none;
+
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+
+ul li:nth-child(odd) {
+ background: #f9f9f9;
+}
+
+ul li:hover {
+ background: #ddd;
+}
+
+ul li.checked {
+ background: #276678;
  color: #fff;
  text-decoration: line-through;
 }
-
-.close {
+ 
+ul li.checked::before {
+ content: "";
  position: absolute;
- right: 0;
- top: 0;
- padding: 12px 18px 12px 16px;
+ border-color: #fff;
+ border-style: solid;
+ border-width: 0 2px 2px 0;
+ top: 10px;
+ left: 16px;
+ transform: rotate(45deg);
+ height: 15px;
+ width: 7px;
 }
+
+.list-group-item {
+ border:none;
+}
+
+
+
+
